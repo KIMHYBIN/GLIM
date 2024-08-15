@@ -1,0 +1,18 @@
+#include <string>
+#include <vector>
+
+using namespace std;
+
+vector<int> solution(vector<int> num_list, int n) {
+    vector<int> answer;
+    vector<int> other_list;
+
+    other_list = vector<int>(num_list.begin(), num_list.begin() + n);
+    answer = vector<int>(num_list.begin() + n, num_list.end());
+    
+    for (int i = 0; i < other_list.size(); i++) {
+        answer.push_back(other_list[i]);
+    }
+
+    return answer;
+}
